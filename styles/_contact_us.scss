@@ -1,0 +1,26 @@
+#banner__contactUs{
+    background-image: map-get($banners-img , banner_contact_us);
+    @include banners-position (top);
+    @media all and (max-width:768px) {
+        background-image: map-get($banners-img-768 , banner_contact_us-768 );
+    }
+
+}
+
+#contact__networks{
+    a{
+        transition: 300ms;
+        color: black;
+        &:hover{
+            color: $main-color;
+            border-bottom: 1px solid;
+            padding-bottom: .5rem;
+        }
+    }
+    
+}
+
+
+
+
+

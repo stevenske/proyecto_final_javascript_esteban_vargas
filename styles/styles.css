@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Oswald&family=Poppins:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: #90b1f7;
+}
+
+@-webkit-keyframes movement {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+#header__logo img {
+  -webkit-animation-name: movement;
+          animation-name: movement;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+#banner {
+  background-image: url(../assets/img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  min-height: 60vh;
+  background-position: center;
+}
+@media all and (max-width: 768px) {
+  #banner {
+    background-image: url(../assets/img/banner-768.jpg);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .bg-md-transparent {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+}
+.zoom {
+  transition: 250ms;
+}
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.btn-train {
+  background-color: #779ff6;
+}
+
+.text-main {
+  color: #90b1f7;
+}
+
+@media all and (max-width: 768px) {
+  #shopping__logo img {
+    width: 30px !important;
+  }
+}
+
+.imgWrap {
+  position: relative;
+}
+.imgWrap .imgWeather {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.imgWrap:hover .imgWeather {
+  visibility: visible;
+  opacity: 1;
+}
+
+#banner__countries {
+  background-image: url(../assets/img/banner_countries.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  min-height: 60vh;
+  background-position: center;
+}
+@media all and (max-width: 768px) {
+  #banner__countries {
+    background-image: url(../assets/img/banner_countries-768.jpg);
+  }
+}
+
+.h-iframe {
+  height: 18rem;
+}
+
+#banner__offerts {
+  background-image: url(../assets/img/banner_offerts.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  min-height: 60vh;
+  background-position: top;
+}
+@media all and (max-width: 768px) {
+  #banner__offerts {
+    background-image: url(../assets/img/banner_offerts-768.jpg);
+    background-position: 80% center;
+  }
+}
+
+#banner__plan_your_trip {
+  background-image: url(../assets/img/banner_plan_your_trip.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  min-height: 60vh;
+  background-position: center;
+}
+@media all and (max-width: 768px) {
+  #banner__plan_your_trip {
+    background-image: url(../assets/img/banner_plan_your_trip-768.jpg);
+    background-position: center;
+  }
+}
+
+.bg-gray {
+  background-color: rgb(219, 219, 219);
+}
+
+.border-plan {
+  border: 1px solid #000;
+}
+@media all and (max-width: 768px) {
+  .border-plan {
+    border: 0;
+  }
+}
+
+#map, iframe {
+  border-radius: 5px;
+}
+@media all and (max-width: 768px) {
+  #map, iframe {
+    width: 100%;
+  }
+}
+
+#banner__contactUs {
+  background-image: url(../assets/img/banner_contact_us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  min-height: 60vh;
+  background-position: top;
+}
+@media all and (max-width: 768px) {
+  #banner__contactUs {
+    background-image: url(../assets/img/banner_contact_us.jpg);
+  }
+}
+
+#contact__networks a {
+  transition: 300ms;
+  color: black;
+}
+#contact__networks a:hover {
+  color: #90b1f7;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
+}/*# sourceMappingURL=styles.css.map */

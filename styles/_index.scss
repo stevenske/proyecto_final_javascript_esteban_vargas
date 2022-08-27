@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: $main_color;
+}
+@keyframes movement{
+    0%{
+        transform:translate(0px);
+    }
+    50%{
+        transform:translate(5px);
+    }
+    100%{
+        transform:translate(0px);
+    }
+}
+#header__logo img{
+    animation-name: movement;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    animation-duration: 1s;
+}
+.w-10{
+    width: 10%;
+}
+#banner{
+    background-image: map-get($banners-img, banner);
+    @include banners-position(center);
+    @media all and (max-width:768px){
+        background-image: map-get($banners-img-768 , banner-768);
+    }
+} 
+@media all and (max-width:768px){
+    .bg-md-transparent{
+        background-color: #0000 !important;
+    }
+}
+.zoom{
+    transition: 250ms;
+    &:hover{
+        transform: scale(1.1)
+    }
+}
+.btn-train{
+    background-color:$btn_color;
+}
+.text-main{
+    color: $main_color;
+}
+#shopping__logo img{
+    @media all and (max-width:768px){
+        width: 30px !important;
+    }
+}
+.imgWrap{
+    position: relative;
+    .imgWeather{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .2s, visibility .2s;
+    }
+}
+.imgWrap:hover .imgWeather {
+    visibility: visible;
+    opacity: 1;
+    
+}

@@ -1,0 +1,23 @@
+#banner__plan_your_trip{
+    background-image: map-get($banners-img, banner_plan_your_trip );
+    @include banners-position(center);
+    @media all and (max-width:768px) {
+        background-image: map-get($banners-img-768 , banner_plan_your_trip-768);
+        background-position: center;
+    }
+}
+.bg-gray{
+    background-color: rgb(219, 219, 219);
+}
+.border-plan{
+    border: 1px solid #000;
+    @media all and (max-width:768px){
+        border: 0;
+    }
+}
+#map, iframe{
+    border-radius: 5px;
+    @media all and (max-width:768px){
+        width: 100%;
+    }
+}
