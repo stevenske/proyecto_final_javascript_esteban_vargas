@@ -32,7 +32,7 @@ stockTrips.push(rome, paris, amsterdam, greece, london, spain)
 
 const showProducts = ({ img, trip, desc, price, id }) => {
     let div = document.createElement('div')
-    fetch(`http://api.weatherapi.com/v1/current.json?key=57530acc27d84266b02145938221008&q=${trip}&aqi=yes`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=792410ec290a4f589b8191659222708&q=${trip}&aqi=yes`)
         .then(resp => resp.json())
         .then(data => {
             console.log(data)
@@ -41,7 +41,7 @@ const showProducts = ({ img, trip, desc, price, id }) => {
         <div class="card text-center shadow-lg" style="width: 18rem;">
         <div class='imgWrap zoom text-danger'>
             <img src="${img}" class="card-img-top rounded" alt="photo of the Colosseum in Rome">
-            <p class='imgWeather'>${data.current.feelslike_c}°C<img src='${data.current.condition.icon}'>
+            <p class='imgWeather'>${data.current.feelslike_c}°C
                 <span>${data.current.condition.text}</span>
             </p>
         </div>
@@ -204,7 +204,6 @@ function updateTotal() {
     for (let i = 0; i < shoppingCart.length; i++) {
         total += shoppingCart[i].price * shoppingCart[i].quantityProd
     }
-    console.log(total)
     return total
 }
 //----------------------------------------------------------
@@ -235,18 +234,3 @@ function removeAll() {
     }
 }
 //----------------------------------------------------------
-
-
-//GET LOWEST TRIP PRICE-------------------------------------
-
-// function getPrices() {
-//     return stockTrips.map(trip => trip.price)
-// }
-
-// function getLowestPrice() {
-//     return Math.min(...getPrices())
-// }
-
-// console.log(getLowestPrice())
-//------------------------------------------------------------
-

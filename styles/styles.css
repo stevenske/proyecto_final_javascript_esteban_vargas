@@ -107,39 +107,6 @@ body {
   opacity: 1;
 }
 
-#banner__countries {
-  background-image: url(../assets/img/banner_countries.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  min-height: 60vh;
-  background-position: center;
-}
-@media all and (max-width: 768px) {
-  #banner__countries {
-    background-image: url(../assets/img/banner_countries-768.jpg);
-  }
-}
-
-.h-iframe {
-  height: 18rem;
-}
-
-#banner__offerts {
-  background-image: url(../assets/img/banner_offerts.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-  min-height: 60vh;
-  background-position: top;
-}
-@media all and (max-width: 768px) {
-  #banner__offerts {
-    background-image: url(../assets/img/banner_offerts-768.jpg);
-    background-position: 80% center;
-  }
-}
-
 #banner__plan_your_trip {
   background-image: url(../assets/img/banner_plan_your_trip.jpg);
   background-repeat: no-repeat;

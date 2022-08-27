@@ -1,9 +1,0 @@
-#banner__offerts{
-    background-image: map-get($banners-img , banner_offerts );
-    @include banners-position(top);
-    @media all and (max-width:768px){
-        background-image: map-get($banners-img-768, banner_offerts-768 );
-        background-position: 80% center;
-    }
-}
-
