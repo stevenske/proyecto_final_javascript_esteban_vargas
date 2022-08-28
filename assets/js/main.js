@@ -234,3 +234,35 @@ function removeAll() {
     }
 }
 //----------------------------------------------------------
+//FOOTER-------------------------------------------------------
+function showFooter(){
+    footer.innerHTML = `
+    <footer class="py-3 border-top border-dark">
+        <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="plan_your_trip.html" class="nav-link px-2 text-muted">Plan Your Trip</a></li>
+            <li class="nav-item"><a href="contact_us.html" class="nav-link px-2 text-muted">Contact Us</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 TrainTrip, INC</p>
+        <div class="container d-flex justify-content-around">
+            <div>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="zoom" src="./assets/img/icon_facebook.png" alt="logo of facebook">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="zoom" src="./assets/img/icon_instagram.png" alt="logo of instagram">
+                </a>
+            </div>
+            <div>
+                <a href="https://twitter.com" target="_blank">
+                    <img class="zoom" src="./assets/img/icon_twitter.png" alt="logo of twitter">
+                </a>
+            </div>
+        </div> 
+    </footer>
+    `
+}
+showFooter()
+//----------------------------------------------------------
