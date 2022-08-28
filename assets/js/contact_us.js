@@ -48,30 +48,46 @@ showNetworks()
 function showForm(){
     form.innerHTML = `
     <div class="row d-flex justify-content-center">
-    <form class="bg-light col-md-6 my-3 rounded py-2 border-plan">
-    <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-                    <input type="name" class="form-control" placeholder="name...">
-                    </div>
-                    <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name</label>
+        <form class="bg-light col-md-6 my-3 rounded py-2 border-plan">
+            <div id="form_box" class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                    <input id="name" type="name" class="form-control" placeholder="name...">
+            </div>
+            <div id="form_box" class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
                     <input type="lastName" class="form-control" placeholder="Last Name...">
-                    </div>
-                    <div class="mb-3">
-                    <label for="Email1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" placeholder="Email...">
-                    </div>
-                    <div class="mb-3">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" rows="3"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-train border-plan fw-bold" data-bs-toggle="modal" data-bs-target="#formModal">SEND</button>
-                    </form>
-                    </div>
+            </div>
+            <div id="form_box" class="mb-3">
+                <label for="Email1" class="form-label">Email address</label>
+                <input id="email" type="email" class="form-control" placeholder="Email...">
+            </div>
+            <div id="form_box" class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea id="message" class="form-control" rows="3"></textarea>
+            </div>
+            <button onclick="sendForm()" class="btn btn-train border-plan fw-bold" data-bs-toggle="modal" data-bs-target="#formModal">SEND</button>
+        </form>
+        </div>
                     `
                 }
 showForm()
 //-----------------------------------------------------------
+//SENDFORM-------------------------------------------------------
+function sendForm(){
+    emailjs.send("service_rvbh66w","template_gvm0ppu",{
+        from_name: document.querySelector('#name').value,
+        email_id: document.querySelector('#email').value,
+        message: document.querySelector('#message').value,
+        });
+}
+(function(){
+    emailjs.init("dTxhSRqtx0J5r-p8p");
+})()
+
+// the message is going to be sended to this gmail: traintripsJS@gmail.com password: train12345678
+
+//-----------------------------------------------------------
+
 
 //FOOTER-----------------------------------------------------
 function showFooter(){
