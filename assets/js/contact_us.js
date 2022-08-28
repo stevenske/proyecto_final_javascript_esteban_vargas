@@ -1,8 +1,6 @@
 let navbar = document.getElementById('header')
-let map = document.getElementById('map')
-let cards = document.getElementById('cards')
-let footer = document.getElementById('footer')
-
+let networks = document.getElementById('networks_container')
+let form = document.getElementById('form')
 
 //NAVBAR----------------------------------------------
 
@@ -33,41 +31,49 @@ function showNavBar() {
 showNavBar()
 //----------------------------------------------------------
 
-//MAP-------------------------------------------------------
-function showMap(){
-
-map.innerHTML =
-    `
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47139330.24912588!2d-12.8611109417314!3d43.85258716626324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ed8886cfadda85%3A0x72ef99e6b3fcf079!2sEuropa!5e0!3m2!1ses-419!2sar!4v1651095492043!5m2!1ses-419!2sar" width="600" height="400" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>    
-`
-}
-
-//----------------------------------------------------------
-//MAP-------------------------------------------------------
-function showCards (){
-    cards.innerHTML = `
-    <div class="row d-flex justify-content-center gap-3 my-5">
-    <div class="card col-md-6 shadow-lg text-center m-2 mx-3 border-plan" style="width: 18rem;">
-    <img src="assets/img/map_logo.png" class="card-img-top mt-1" alt="map logo">
-    <div class="card-body">
-    <p class="card-title fs-5 text-muted">Route</p>
-    <p class="card-text">Plan your route with the map</p>
-    </div>
-    </div>
-    <div class="card col-md-6 shadow-lg text-center m-2 mx-3 border-plan" style="width: 18rem;">
-    <img src="assets/img/train_logo.png" class="card-img-top mt-1" alt="train logo">
-    <div class="card-body">
-    <p class="card-title fs-5 text-muted">Find the best train Pass</p>
-    <p class="card-text">Pick your ideal TrainTrip Pass</p>
-    </div>
-    </div>
+function showNetworks(){
+    networks.innerHTML = `
+    <div class="tittle fs-1 text-center">Contact <span class="text-main">Us</span></div>
+    <div id="contact__networks" class="d-flex gap-1 justify-content-center rounded lh-3 border-2">
+    <div><a class="text-decoration-none" href="https://www.instagram.com" target="_blank">Instagram</a></div>
+    <div><a class="text-decoration-none" href="https://www.twitter.com" target="_blank">Twitter</a></div>
+    <div><a class="text-decoration-none" href="https://www.facebook.com" target="_blank">Facebook</a></div>
     </div>
     `
-    
 }
-showCards()
-//----------------------------------------------------------
-//FOOTER-------------------------------------------------------
+showNetworks()
+//-----------------------------------------------------------
+
+//FORM-------------------------------------------------------
+function showForm(){
+    form.innerHTML = `
+    <div class="row d-flex justify-content-center">
+    <form class="bg-light col-md-6 my-3 rounded py-2 border-plan">
+    <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+                    <input type="name" class="form-control" placeholder="name...">
+                    </div>
+                    <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="lastName" class="form-control" placeholder="Last Name...">
+                    </div>
+                    <div class="mb-3">
+                    <label for="Email1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" placeholder="Email...">
+                    </div>
+                    <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-train border-plan fw-bold" data-bs-toggle="modal" data-bs-target="#formModal">SEND</button>
+                    </form>
+                    </div>
+                    `
+                }
+showForm()
+//-----------------------------------------------------------
+
+//FOOTER-----------------------------------------------------
 function showFooter(){
     footer.innerHTML = `
     <footer class="py-3 border-top border-dark">
@@ -99,5 +105,3 @@ function showFooter(){
 }
 showFooter()
 //----------------------------------------------------------
-
-
