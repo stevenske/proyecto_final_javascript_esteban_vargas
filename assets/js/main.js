@@ -164,7 +164,7 @@ function showBuyConfirmation() {
         let name = document.getElementById('name').value
         removeAll()
         Toastify({
-            text: `thanks ${name} for trust in TrainTrips your passage was sended yo your email`,
+            text: `thanks ${name} for trust in TrainTrips your passage was sended to your email`,
             className: "alertConfirmation",
             position: 'center',
             gravity: "top",
