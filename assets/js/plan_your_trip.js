@@ -4,17 +4,16 @@ let cards = document.getElementById('cards')
 let footer = document.getElementById('footer')
 
 //MAP-------------------------------------------------------
-function showMap(){
-
-map.innerHTML =
-    `
+function showMap() {
+    map.innerHTML =
+        `
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47139330.24912588!2d-12.8611109417314!3d43.85258716626324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ed8886cfadda85%3A0x72ef99e6b3fcf079!2sEuropa!5e0!3m2!1ses-419!2sar!4v1651095492043!5m2!1ses-419!2sar" width="600" height="400" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>    
 `
 }
-
+showMap()
 //----------------------------------------------------------
 //MAP-------------------------------------------------------
-function showCards (){
+function showCards() {
     cards.innerHTML = `
     <div class="row d-flex justify-content-center gap-3 my-5">
     <div class="card col-md-6 shadow-lg text-center m-2 mx-3 border-plan" style="width: 18rem;">
@@ -33,12 +32,12 @@ function showCards (){
     </div>
     </div>
     `
-    
+
 }
 showCards()
 //----------------------------------------------------------
 //FOOTER-------------------------------------------------------
-function showFooter(){
+function showFooter() {
     footer.innerHTML = `
     <footer class="py-3 border-top border-dark">
         <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
