@@ -65,11 +65,24 @@ function showForm(){
                 <label class="form-label">Message</label>
                 <textarea id="message" class="form-control" rows="3"></textarea>
             </div>
-            <button onclick="sendForm()" class="btn btn-train border-plan fw-bold" data-bs-toggle="modal" data-bs-target="#formModal">SEND</button>
+            <button id="btn_send" onclick="sendForm()" class="btn btn-train border-plan fw-bold">SEND</button>
         </form>
         </div>
                     `
-                }
+        let send = document.querySelector('#btn_send')
+        send.addEventListener('click',(e) =>{
+            e.preventDefault()
+            let name = document.getElementById('name').value
+            Toastify({
+                
+                text: `THANKS FOR CONTACTING US ${name} THE MESSAGE WAS SENDED`,
+                className: "formMessageSended",
+                position: 'center',
+                gravity: "top",
+            }).showToast()
+
+        })
+    }
 showForm()
 //-----------------------------------------------------------
 //SENDFORM-------------------------------------------------------
