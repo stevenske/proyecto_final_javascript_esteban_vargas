@@ -65,6 +65,9 @@ const showProducts = ({ img, trip, desc, price, id }) => {
                 }).showToast()
             })
         })
+        .catch(error =>{
+            console.log(error);
+        })
     function addCart(idArticle) {
         let finded = stockTrips.find(article => article.id === idArticle)
         if (finded) {
