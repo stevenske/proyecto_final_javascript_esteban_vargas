@@ -32,7 +32,7 @@ stockTrips.push(rome, paris, amsterdam, greece, london, spain)
 
 const showProducts = ({ img, trip, desc, price, id }) => {
     let div = document.createElement('div')
-    fetch(`http://api.weatherapi.com/v1/current.json?key=792410ec290a4f589b8191659222708&q=${trip}&aqi=yes`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=d10428295d8c4b7faa040115221109&q=${trip}&aqi=yes`)
         .then(resp => resp.json())
         .then(data => {
             console.log(data)
